@@ -71,10 +71,3 @@ fn eat(in_str: String) -> bool {
 fn bedazzle(in_str: &mut String) {
     (*in_str) = String::from("sparkly");
 }
-
-// Challenge: Write a function "bedazzle" that takes a mutable reference to a String and
-// ignores what is in the string and replaces the contents of the string with the String
-// "sparkly". Then uncomment the code below.
-//
-// Hint: You will need to dereference the mutable reference in order to assign it a
-// new value.
