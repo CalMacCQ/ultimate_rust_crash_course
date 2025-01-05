@@ -49,7 +49,13 @@ fn main() {
     //       fn function_name<T: Bite>(...)
     //
     bunny_nibbles(&mut carrot, 5);
-    println!("Bunny nibbles for awhile: {:?}", carrot);
+    let n_grapes_to_eat = 4;
+    bunny_nibbles(&mut grapes, n_grapes_to_eat);
+    println!("Bunny nibbles carrots for awhile: {:?}", carrot);
+    println!(
+        "Bunny eats {} more grapes... How many left?: {:?}",
+        n_grapes_to_eat, grapes
+    );
 }
 
 // Challenge: Uncomment the code below. Create a generic `bunny_nibbles`
@@ -60,7 +66,7 @@ fn main() {
 //       fn function_name<T: Bite>(...)
 
 fn bunny_nibbles<T: Bite>(thing_to_bite: &mut T, n_bites: i32) {
-    for _i in 1..n_bites {
+    for _i in 0..n_bites {
         thing_to_bite.bite();
     }
 }
